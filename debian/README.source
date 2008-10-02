@@ -3,9 +3,9 @@
 Note that this version of the package uses the pre-compiled library file for cryptlib
 provided in the Syncterm upstream sources. 
 
-    # Create working directory named libcl_3.3.0-0.1, then change to that directory.
-mkdir /path/to/working/directory/libcl_3.3.0
-cd /path/to/working/directory/libcl_3.3.0
+    # Create working directory named cryptlib_3.3.0, then change to that directory.
+mkdir /path/to/working/directory/cryptlib_3.3.0
+cd /path/to/working/directory/cryptlib_3.3.0
 
     # Download cl33.zip from ftp://ftp.franken.de/pub/crypt/cryptlib/.
     
