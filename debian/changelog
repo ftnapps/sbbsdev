@@ -1,4 +1,4 @@
-libcl (3.3.0-0.1) unstable; urgency=low
+cryptlib (3.3.0-0.1) unstable; urgency=low
 
   * Initial Debian package for cryptlib, which creates the library libcl.so.3.3.0
 
