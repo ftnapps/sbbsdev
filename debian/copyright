@@ -1,0 +1,53 @@
+This package was debianized by Robert James Clay <jame@rocasa.org> on
+Thu,  2 Oct 2008 04:10:14 -0400.
+
+It was downloaded from ftp://ftp.franken.de/pub/crypt/cryptlib/ for the 
+documentation.
+
+cryptlib is distributed under a dual license that allows free, open-source use
+under a GPL-compatible license and closed-source use under a standard
+commercial license.  The GPL-compatible license (a.k.a. the Sleepycat license)
+is given below.  Further details on this license are available from the
+cryptlib home page.
+
+  Copyright 1992-2006 Peter Gutmann. All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, this
+     list of conditions and the following disclaimer.
+
+  2. Redistributions in binary form must reproduce the above copyright notice,
+     this list of conditions and the following disclaimer in the documentation
+     and/or other materials provided with the distribution.
+
+  3. Redistributions in any form must be accompanied by information on how to
+     obtain complete source code for the cryptlib software and any accompanying
+     software that uses the cryptlib software.  The source code must either be
+     included in the distribution or be available for no more than the cost of
+     distribution, and must be freely redistributable under reasonable
+     conditions.  For an executable file, complete source code means the source
+     code for all modules it contains or uses.  It does not include source code
+     for modules or files that typically accompany the major components of the
+     operating system on which the executable file runs.
+
+  THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+  INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT, ARE DISCLAIMED.  IN NO
+  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+  OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+  IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+  OF SUCH DAMAGE.
+
+# Debian packaging
+The Debian packaging is (C) 2008, Robert James Clay <jame@rocasa.org> and
+is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
+
+
+# Please also look if there are files or directories which have a
+# different copyright/license attached and list them here.
+

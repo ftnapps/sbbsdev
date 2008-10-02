@@ -1,0 +1,11 @@
+# cryptlib watch control file for uscan
+# See uscan(1) for format
+
+# Compulsory line, this is a version 3 file
+version=3
+
+# Use the FTP server that the website advises to use for downloads.
+#ftp://ftp.franken.de/pub/crypt/cryptlib/cl(*)\.zip debian uupdate
+ftp://ftp.franken.de/pub/crypt/cryptlib/cl(*)\.zip
+
+
