@@ -54,7 +54,7 @@ clean:
 
 	# Add here commands to clean up after the build process.
 	-$(MAKE) clean
-
+	rm -f tools/endian
 	dh_clean 
 
 install: build
@@ -94,4 +94,3 @@ binary-arch: build install
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure
-2
