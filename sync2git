@@ -11,34 +11,15 @@ CVSROOT=":pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs cvs login"
 
 CVSREPO=":pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs"
 
-##  Done
-#MODULE=ctrl
-#MODULE=docs
+for MODULE in ctrl docs exec include install lib node1 node2 node3 node4 src text web xtrn
+do
 
-MODULE=exec
-#MODULE=include
-#MODULE=install
-#MODULE=lib
+  GITREPO=$PRJDIR/repo/sbbs/$MODULE 
 
-#MODULE=node1
-#MODULE=node2
-#MODULE=node3
-#MODULE=node4
-#MODULE=src
+  echo `date` > $PRJDIR/log/$MODULE-import.start
 
-#MODULE=text
-#MODULE=web
-#MODULE=xtrn
+  git-cvsimport -a -p1 -v -C $GITREPO -d $CVSREPO $MODULE 1>$PRJDIR/log/$MODULE-import.log 2>$PRJDIR/log/$MODULE-error.log
 
-##  Done
+  echo `date` > $PRJDIR/log/$MODULE-import.stop
 
-
-GITREPO=$PRJDIR/repo/sbbs/$MODULE 
-
-echo `date` > $PRJDIR/log/$MODULE-import.start
-
-git-cvsimport -a -p1 -v -C $GITREPO -d $CVSREPO $MODULE 1>$PRJDIR/log/$MODULE-import.log 2>$PRJDIR/log/$MODULE-error.log
-
-echo `date` > $PRJDIR/log/$MODULE-import.stop
-
-
+done
