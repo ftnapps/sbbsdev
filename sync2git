@@ -1,5 +1,5 @@
 #!/bin/sh
-# sync2git - v0.1 - Robert James Clay
+# sync2git - v0.2 - Robert James Clay
 
 
 PRJDIR=/opt/sbbscvsgit
