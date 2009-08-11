@@ -18,7 +18,7 @@ do
 
   echo `date` > $PRJDIR/log/$MODULE-import.start
 
-  git-cvsimport -a -p1 -v -C $GITREPO -d $CVSREPO $MODULE 1>$PRJDIR/log/$MODULE-import.log 2>$PRJDIR/log/$MODULE-error.log
+  git-cvsimport -a -p1 -C $GITREPO -d $CVSREPO $MODULE 1>$PRJDIR/log/$MODULE-import.log 2>$PRJDIR/log/$MODULE-error.log
 
   echo `date` > $PRJDIR/log/$MODULE-import.stop
 
