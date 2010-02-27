@@ -1,8 +1,8 @@
 #!/bin/bash
-# sync2git - v0.2 - Robert James Clay
+# sbbscvs2git - v0.3 - Robert James Clay
 
 
-PRJDIR=/opt/sbbscvsgit
+PRJDIR=/opt/sbbscvs2git
 
 cd $PRJDIR/repo
 
