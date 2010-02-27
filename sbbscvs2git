@@ -20,7 +20,7 @@ do
 
   echo `date` > $LOGDIR/$MODULE-import.start
 
-  git-cvsimport -a -p1 -C $GITREPO -d $CVSREPO $MODULE 1>$LOGDIR/$MODULE-import.log 2>$LOGDIR/$MODULE-error.log
+  git-cvsimport -a -p1 -o $MODULE -C $GITREPO -d $CVSREPO $MODULE 1>$LOGDIR/$MODULE-import.log 2>$LOGDIR/$MODULE-error.log
 
   echo `date` > $LOGDIR/$MODULE-import.stop
 
