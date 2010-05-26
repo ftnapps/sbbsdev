@@ -2,6 +2,7 @@
 # sbbscvs2git - v0.3 - Robert James Clay
 
 
+LIBDIR=/usr/lib/git-core
 PRJDIR=/opt/sbbscvs2git
 
 cd $PRJDIR/repo/fromcvs
@@ -20,7 +21,7 @@ do
 
   echo `date` > $LOGDIR/$MODULE-import.start
 
-  git-cvsimport -a -p1 -o $MODULE -C $GITREPO -d $CVSREPO $MODULE 1>$LOGDIR/$MODULE-import.log 2>$LOGDIR/$MODULE-error.log
+  $LIBDIR/git-cvsimport -a -p1 -o $MODULE -C $GITREPO -d $CVSREPO $MODULE 1>$LOGDIR/$MODULE-import.log 2>$LOGDIR/$MODULE-error.log
 
   echo `date` > $LOGDIR/$MODULE-import.stop
 
