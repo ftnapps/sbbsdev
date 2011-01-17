@@ -1,11 +1,12 @@
-README.source for Synchronet release 3.14a.
+README.source for sblibcl release 3.14a.
+cryptlib for Synchronet v3.14a
 
 Procedure for createing a source archive
 =========================================
 
-    # Create working directory named synchronet_3.14a, then change to that directory.
+    # Create working directory named sblibcl_3.14a, then change to that directory.
 
-cd /path/to/working/directory/synchronet-3.14a
+cd /path/to/working/directory/sblibcl-3.14a
 
     # Download ssrc314a.tgz from ftp://vert.synchro.net/Synchronet/ to the working directory.
 
@@ -19,14 +20,18 @@ tar -xzvf ssrc314a.tgz
 
 mv ssrc314a.tgz ..
 
-    # Get the required modules for running synchronet.
+    # Remove the directories and files that are not needed for this archive.
 
-cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a run-sbbs3 
-
-    # Remove the Jasascript Documentation arhives, as they are not needed when have the
-    # extracted documentation available.
-
-rm -f /docs/js/guide/CoreGuideJS15.zip
+rm -r src/*
+rm -r lib/CVS
+rm -r lib/cryptlib/CVS
+rm -r lib/cryptlib/linux.release/CVS
+rm -f lib/cryptlib/linux.release/libcl.so
+rm -r lib/mozilla
+rm -r include/CVS
+rm -r include/cryptlib/CVS
+rm -r include/microsoft
+rm -r include/mozilla
+rm -r include/sdl
 
      # Create the source archive from the working directory.
-    
