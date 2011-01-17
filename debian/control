@@ -1,4 +1,4 @@
-Source: synchronet
+Source: sblibcl
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.org>
 Build-Depends: debhelper (>= 5)
