@@ -1,6 +1,6 @@
-cryptlib (3.3.0-0.1) UNRELEASED; urgency=low
+sblibcl (3.14a-0.1) UNRELEASED; urgency=low
 
-  * Initial Debian package for cryptlib, which creates the library libcl.so.3.3.0
+  * Cryptlib library for SBBS, which installs the library libcl.so.3.3.0
 
- -- Robert James Clay <jame@rocasa.org>  Thu,  2 Oct 2008 04:10:14 -0400
+ -- Robert James Clay <jame@rocasa.us>  Sat, 13 Mar 2010 16:10:18 -0400
 
