@@ -1,15 +1,9 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
-# Sample debian/rules that uses debhelper.
-# This file was originally written by Joey Hess and Craig Small.
-# As a special exception, when this file is copied by dh-make into a
-# dh-make output file, you may use that output file without restriction.
-# This special exception was added by Craig Small in version 0.37 of dh-make.
+# debian/rules for sblibcl package.
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
-
-
 
 
 CFLAGS = -Wall -g
@@ -19,15 +13,6 @@ ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
 else
 	CFLAGS += -O2
 endif
-
-# shared library versions, option 1
-version=2.0.5
-major=2
-# option 2, assuming the library is created as src/.libs/libfoo.so.2.0.5 or so
-#version=`ls src/.libs/lib*.so.* | \
-# awk '{if (match($$0,/[0-9]+\.[0-9]+\.[0-9]+$$/)) print substr($$0,RSTART)}'`
-#major=`ls src/.libs/lib*.so.* | \
-# awk '{if (match($$0,/\.so\.[0-9]+$$/)) print substr($$0,RSTART+4)}'`
 
 configure: configure-stamp
 configure-stamp:
@@ -42,8 +27,7 @@ build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
-	$(MAKE) shared
-	$(MAKE) stestlib
+	# (using pre-compiled file
 
 	touch $@
 
@@ -53,8 +37,6 @@ clean:
 	rm -f build-stamp configure-stamp
 
 	# Add here commands to clean up after the build process.
-	-$(MAKE) clean
-	rm -f tools/endian
 	dh_clean 
 
 install: build
@@ -65,6 +47,7 @@ install: build
 
 	# Add here commands to install the package into debian/tmp
 	#dh_install libcl.3.3.0 /usr/lib
+	# using deb helper
 
 # Build architecture-independent files here.
 binary-indep: build install
