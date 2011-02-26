@@ -1,37 +1,65 @@
-README.source for sblibcl release 3.15a.
-cryptlib for Synchronet v3.15a
+#!/bin/bash
+# debian/README.source for sblibcl release 3.15a.
+# cryptlib for Synchronet v3.15a
+#
+# Copyright 2011 Robert James Clay <jame@rocasa.us>, GPL2+
+#
+#Procedure for createing a source archive
+#=========================================
 
-Procedure for createing a source archive
-=========================================
+# If the working directory path is not passed on the command line,
+# then use the current directory.
+if [ -z "$1" ]; then
+    # Use the current directory as the working directory 
+    WORKDIR=`pwd`
+else
+    # Set working directory to that passed on the command line
+    WORKDIR=$1
+    # If working directory is not present, create it
+    if [ ! -d $WORKDIR ]; then
+	mkdir $WORKDIR
+	cd $WORKDIR
+    fi
+fi
 
-    # Create working directory named sblibcl_3.15a, then change to that directory.
+# Set working source directory
+SRCDIR=$WORKDIR/sblibcl-3.15a
 
-cd /path/to/working/directory/sblibcl-3.15a
+ # Create source directory named sblibcl-3.15a if not already present
+if [ ! -d $SRCDIR ]; then
+    mkdir $SRCDIR
+fi
 
-    # Download ssrc315a.tgz from ftp://vert.synchro.net/Synchronet/ to the working directory.
+# If do not already have it in the working directory;  download the file 
+# sbbs_src.tgz from ftp://ftp.synchro.net.
+if [ ! -e "$WORKDIR/sbbs_src.tgz" ]; then
+    wget ftp://ftp.synchro.net/sbbs_src.tgz
+fi
 
-wget ftp://vert.synchro.net/Synchronet/ssrc315a.tgz
+# Extract contents of upstream source archive to working directory.
+cd $SRCDIR
+tar -xzvf $WORKDIR/sbbs_src.tgz
 
-    # Extract contents of upstream source archive to working directory.
+# Remove the directories and files that are not needed for this archive.
+cd $WORKDIR
+rm -r $SRCDIR/src
+rm -r $SRCDIR/lib/CVS
+rm -r $SRCDIR/lib/cryptlib/CVS
+rm -r $SRCDIR/lib/cryptlib/linux.x64.release/CVS
+rm -r $SRCDIR/include/CVS
+rm -r $SRCDIR/include/cryptlib/CVS
+rm -r $SRCDIR/include/microsoft
+rm -r $SRCDIR/include/mozilla
+rm -r $SRCDIR/include/sdl
 
-tar -xzvf ssrc315a.tgz     
+# Rename library file with version number
+LIBSRCDIR=$SRCDIR/lib/cryptlib/linux.x64.release
+mv $LIBSRCDIR/libcl.so $LIBSRCDIR/libcl.so.3.3.1
 
-    # Now move the archive ssrc315a.tgz out of the working directory.
+# Adjust the archive information files.
+echo "Contains just the cryptlib files." >> $SRCDIR/FILE_ID.DIZ
+echo "Note that this version of the archive contains just the cryptlib files." >> $SRCDIR/README.TXT
 
-mv ssrc315a.tgz ..
+# Create the source archive from the working source directory.
+tar cf - sblibcl-3.15a | gzip -f9 > sblibcl_3.15a.orig.tar.gz
 
-    # Remove the directories and files that are not needed for this archive.
-
-rm -r src/*
-rm -r lib/CVS
-rm -r lib/cryptlib/CVS
-rm -r lib/cryptlib/linux.release/CVS
-rm -f lib/cryptlib/linux.release/libcl.so
-rm -r lib/mozilla
-rm -r include/CVS
-rm -r include/cryptlib/CVS
-rm -r include/microsoft
-rm -r include/mozilla
-rm -r include/sdl
-
-     # Create the source archive from the working directory.
