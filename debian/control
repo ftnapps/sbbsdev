@@ -21,7 +21,7 @@ Description: add encryption and authentication services to software
 Package: sblibcl-dev
 Section: libdevel
 Architecture: amd64
-Depends: sblibcl (= ${Source-Version})
+Depends: sblibcl (= ${source:Version})
 Description: add encryption and authentication services to software
  cryptlib consists of a set of layered security services and associated
  programming interfaces that provide an integrated set of information and
