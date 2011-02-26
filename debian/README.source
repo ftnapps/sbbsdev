@@ -1,24 +1,24 @@
-README.source for sblibcl release 3.14a.
-cryptlib for Synchronet v3.14a
+README.source for sblibcl release 3.15a.
+cryptlib for Synchronet v3.15a
 
 Procedure for createing a source archive
 =========================================
 
-    # Create working directory named sblibcl_3.14a, then change to that directory.
+    # Create working directory named sblibcl_3.15a, then change to that directory.
 
-cd /path/to/working/directory/sblibcl-3.14a
+cd /path/to/working/directory/sblibcl-3.15a
 
-    # Download ssrc314a.tgz from ftp://vert.synchro.net/Synchronet/ to the working directory.
+    # Download ssrc315a.tgz from ftp://vert.synchro.net/Synchronet/ to the working directory.
 
-wget ftp://vert.synchro.net/Synchronet/ssrc314a.tgz
+wget ftp://vert.synchro.net/Synchronet/ssrc315a.tgz
 
     # Extract contents of upstream source archive to working directory.
 
-tar -xzvf ssrc314a.tgz     
+tar -xzvf ssrc315a.tgz     
 
-    # Now move the archive ssrc314a.tgz out of the working directory.
+    # Now move the archive ssrc315a.tgz out of the working directory.
 
-mv ssrc314a.tgz ..
+mv ssrc315a.tgz ..
 
     # Remove the directories and files that are not needed for this archive.
 

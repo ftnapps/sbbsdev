@@ -1,5 +1,5 @@
 #!/bin/sh
-# postrm script for libcl
+# postrm script for sblibcl
 #
 # see: dh_installdeb(1)
 

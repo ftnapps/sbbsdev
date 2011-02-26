@@ -1,5 +1,5 @@
 #!/bin/sh
-# prerm script for libcl
+# prerm script for sblibcl
 #
 # see: dh_installdeb(1)
 

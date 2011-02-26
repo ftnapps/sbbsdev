@@ -1,5 +1,5 @@
 #!/bin/sh
-# preinst script for libcl
+# preinst script for sblibcl
 #
 # see: dh_installdeb(1)
 

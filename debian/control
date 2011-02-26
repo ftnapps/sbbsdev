@@ -2,12 +2,12 @@ Source: sblibcl
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.us>
 Build-Depends: debhelper (>= 5)
-Standards-Version: 3.7.2
+Standards-Version: 3.8.4
 Section: libs
 
 Package: sblibcl
 Section: libs
-Architecture: i386
+Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: add encryption and authentication services to software
  cryptlib consists of a set of layered security services and associated
@@ -20,7 +20,7 @@ Description: add encryption and authentication services to software
 
 Package: sblibcl-dev
 Section: libdevel
-Architecture: i386
+Architecture: amd64
 Depends: sblibcl (= ${Source-Version})
 Description: add encryption and authentication services to software
  cryptlib consists of a set of layered security services and associated
