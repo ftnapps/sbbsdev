@@ -46,7 +46,7 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/tmp
-	#dh_install libcl.3.3.0 /usr/lib
+	#
 	# using deb helper
 
 # Build architecture-independent files here.
@@ -61,8 +61,6 @@ binary-arch: build install
 	dh_installdocs
 	dh_installexamples
 	dh_install
-#	dh_installmenu
-#	dh_installdebconf	
 	dh_installman
 	dh_link
 	dh_strip
