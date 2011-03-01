@@ -1,0 +1,60 @@
+#!/bin/bash
+# scripts/create-orig-source for sbbsdev Debian package
+# For Synchronet BBS from the current CVS archives. 
+#
+# Copyright 2011 Robert James Clay <jame@rocasa.us>, GPL2+
+#
+#Procedure for createing a source archive
+#=========================================
+
+# If the working directory path is not passed on the command line,
+# then use the current directory.
+if [ -z "$1" ]; then
+    # Use the current directory as the working directory 
+    WORKDIR=`pwd`
+else
+    # Set working directory to that passed on the command line
+    WORKDIR=$1
+    # If working directory is not present, create it & change to it
+    if [ ! -d $WORKDIR ]; then
+	mkdir $WORKDIR
+	cd $WORKDIR
+    fi
+fi
+
+# The format of the version string for the acrhive is YYMMDD, where YY is the
+# last two digits of the year, MM is the month number, & DD is the day number.
+# The date of the source code archive is noted in the FILE_ID.DIZ file in the
+# sbbs_dev.tgz source archive.  For now, creating it from todays date.
+YYMMDD=`date +%y%m%d`
+
+# Set working source directory
+SRCDIR=$WORKDIR/sbbsdev-$YYMMDD
+
+ # Create source directory named in the forat sbbsdev-YYMMDD if not already present
+if [ ! -d $SRCDIR ]; then
+    mkdir $SRCDIR
+fi
+
+# If do not already have it in the working directory;  download the file 
+# sbbs_dev.tgz from ftp://ftp.synchro.net.
+if [ ! -e "$WORKDIR/sbbs_dev.tgz" ]; then
+    wget ftp://ftp.synchro.net/sbbs_dev.tgz
+fi
+
+# If do not already have it in the working directory;  download the file 
+# sbbs_run.tgz from ftp://ftp.synchro.net. (Does not change as often.)
+if [ ! -e "$WORKDIR/sbbs_run.tgz" ]; then
+    wget ftp://ftp.synchro.net/sbbs_run.tgz
+fi
+
+# Extract contents of upstream source archives to source working directory.
+cd $SRCDIR
+tar -xzvf $WORKDIR/sbbs_run.tgz
+cd $SRCDIR/exec
+tar -xzvf $WORKDIR/sbbs_dev.tgz
+
+# Create the source archive from the working source directory.
+cd $WORKDIR
+tar cfj sbbsdev_$YYMMDD.orig.tar.bz2 sbbsdev-$YYMMDD/ && rm -fr $WORKDIR/sbbsdev-$YYMMDD
+
