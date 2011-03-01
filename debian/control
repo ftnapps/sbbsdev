@@ -1,21 +1,21 @@
-Source: sbbscvs
+Source: sbbsdev
 Section: non-free/net
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.us>
 Build-Depends: debhelper (>= 7.0.15), libncurses5-dev, libnspr4-dev, libmozjs-dev, libx11-dev, sblibcl-dev
 Standards-Version: 3.8.0
 Vcs-Cvs: cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs 
-Vcs-Svn: svn://rocasa.org/syncdeb/sbbscvs/trunk/debian
-Vcs-Browser: http://rocasa.org/cgi-bin/viewvc.cgi/syncdeb/sbbscvs
+Vcs-Svn: svn://rocasa.org/syncdeb/sbbsdev/trunk/debian
+Vcs-Browser: http://rocasa.org/cgi-bin/viewvc.cgi/syncdeb/sbbsdev
 Homepage: http://www.synchro.net
 
-Package: sbbscvs
+Package: sbbsdev
 Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common
 Recommends: make, zip, unzip, dosemu, dosemu-freedos
 Suggests: binkd, arc, arj, unrar-free, unzoo, zoo, lha
 Provides: httpd, httpd-cgi, ftp-server, news-transport-system, pop3-server, telnet-server
-Description: SBBS - Synchronet BBS Software from CVS
+Description: SBBS - Synchronet BBS Software from Development
  Synchronet Bulletin Board System (SBBS) Software is a free software package
  that can turn your personal computer into your own custom online service
  supporting multiple simultaneous users with hierarchical message and file

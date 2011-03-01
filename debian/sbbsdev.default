@@ -1,0 +1,19 @@
+# Defaults for sbbsdev initscript
+# sourced by /etc/init.d/sbbsdev
+# installed at /etc/default/sbbsdev by the maintainer scripts
+
+#
+# This is a POSIX shell fragment
+#
+
+# Run sbbsdev at startup ? Set to "Yes" after configuring sbbsdev
+# in order for it to start at bootup.
+SBBSDEV_ENABLE=No
+
+# SBBSCTRL should be set to the directory where the sbbs.ini file is
+# located.  Defaults to /opt/sbbsdev/ctrl.
+export SBBSCTRL=/opt/sbbsdev/ctrl
+
+# Additional options that are passed to the Daemon.
+DAEMON_ARGS=$SBBSCTRL/sbbs.ini
+

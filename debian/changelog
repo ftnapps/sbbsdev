@@ -1,6 +1,6 @@
-sbbscvs (110116-0.1) UNRELEASED; urgency=low
+sbbsdev (110227-0.1) UNRELEASED; urgency=low
 
-  * Synchronet BBS, from CVS as of 16 January 2011 
+  * Synchronet BBS, from Development as of 27 February 2011 
 
- -- Robert James Clay <jame@rocasa.us>  Fri, 16 Jan 2011 13:02:27 -0400
+ -- Robert James Clay <jame@rocasa.us>  Sun, 27 Feb 2011 14:28:27 -0500
 
