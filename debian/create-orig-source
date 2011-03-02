@@ -1,13 +1,13 @@
 #!/bin/bash
 # debian/create-orig-source for sblibs release 3.14a.
 # libjs for Synchronet v3.14a
-# libnspr for Synchronet v3.14a
+# libnspr4 for Synchronet v3.14a
 # libcl, cryptlib for Synchronet v3.14a
 #
 # Copyright 2011 Robert James Clay <jame@rocasa.us>, GPL2+
 #
-#Procedure for createing a source archive
-#=========================================
+# Procedure for createing a source archive
+# =========================================
 
 # If the working directory path is not passed on the command line,
 # then use the current directory.
@@ -47,18 +47,28 @@ cd $WORKDIR
 rm -r $SRCDIR/src
 rm -r $SRCDIR/include/CVS
 rm -r $SRCDIR/include/cryptlib/CVS
-rm -r $SRCDIR/include/microsoft
-rm -r $SRCDIR/include/mozilla
-rm -r $SRCDIR/include/sdl
+rm -r $SRCDIR/include/microsoft/CVS
+rm -r $SRCDIR/include/microsoft/psdk/CVS
+rm -r $SRCDIR/include/mozilla/CVS
+rm -r $SRCDIR/include/mozilla/js/CVS
+rm -r $SRCDIR/include/mozilla/nspr/CVS
+rm -r $SRCDIR/include/mozilla/nspr/obsolete/CVS
+rm -r $SRCDIR/include/sdl/CVS
 rm -r $SRCDIR/lib/CVS
 rm -r $SRCDIR/lib/cryptlib/CVS
 rm -r $SRCDIR/lib/cryptlib/linux.release/CVS
 rm -r $SRCDIR/lib/cryptlib/linux.release/libcl.so
-rm -r $SRCDIR/lib/mozilla
+rm -r $SRCDIR/lib/mozilla/CVS
+rm -r $SRCDIR/lib/mozilla/js/CVS
+rm -r $SRCDIR/lib/mozilla/js/linux.debug/CVS
+rm -r $SRCDIR/lib/mozilla/js/linux.release/CVS
+rm -r $SRCDIR/lib/mozilla/nspr/CVS
+rm -r $SRCDIR/lib/mozilla/nspr/linux.debug/CVS
+rm -r $SRCDIR/lib/mozilla/nspr/linux.release/CVS
 
 # Adjust the archive information files.
-echo "Contains just the cryptlib files." >> $SRCDIR/FILE_ID.DIZ
-echo "Note that this version of the archive contains just the cryptlib files." >> $SRCDIR/README.TXT
+echo "Contains just the library files." >> $SRCDIR/FILE_ID.DIZ
+echo "Note that this version of the archive contains just the SBBS Library files." >> $SRCDIR/README.TXT
 
 # Create the source archive from the working source directory.
 tar cf - sblibs-3.14a | gzip -f9 > sblibs_3.14a.orig.tar.gz
