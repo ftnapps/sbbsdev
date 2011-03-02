@@ -1,5 +1,10 @@
 usr/lib
-usr/include
-usr/include/cryptlib
+usr/include/sbbs
+usr/include/sbbs/cryptlib
+usr/include/sbbs/mozilla
+usr/include/sbbs/mozilla/js
+usr/include/sbbs/mozilla/nspr
+
+
 
 
