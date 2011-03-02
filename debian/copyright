@@ -1,6 +1,8 @@
 This package was debianized by Robert James Clay <jame@rocasa.us> on
 Sat, 13 Mar 2010 16:10:14 -0400.
 
+Copyright information for libjs and libnspr
+
 The Syncrhonet BBS Cryptlib library debian package is derived from the
 one compiled for use with the Synchronet BBS Source archive and distributed
 with that source archive.

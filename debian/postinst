@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for libcl
+# postinst script for sblibs
 #
 # see: dh_installdeb(1)
 

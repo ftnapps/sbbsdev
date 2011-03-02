@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
-# debian/rules for sblibcl package.
+# debian/rules for sblibs package.
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1

@@ -1,5 +1,5 @@
 #!/bin/bash
-# debian/README.source for sblibcl release 3.14a.
+# debian/README.source for sblibs release 3.14a.
 # cryptlib for Synchronet v3.14a
 #
 # Copyright 2011 Robert James Clay <jame@rocasa.us>, GPL2+
@@ -23,9 +23,9 @@ else
 fi
 
 # Set working source directory
-SRCDIR=$WORKDIR/sblibcl-3.14a
+SRCDIR=$WORKDIR/sblibs-3.14a
 
- # Create source directory named sblibcl-3.14a if not already present
+ # Create source directory named sblibs-3.14a if not already present
 if [ ! -d $SRCDIR ]; then
     mkdir $SRCDIR
 fi
@@ -59,5 +59,5 @@ echo "Contains just the cryptlib files." >> $SRCDIR/FILE_ID.DIZ
 echo "Note that this version of the archive contains just the cryptlib files." >> $SRCDIR/README.TXT
 
 # Create the source archive from the working source directory.
-tar cf - sblibcl-3.14a | gzip -f9 > sblibcl_3.14a.orig.tar.gz
+tar cf - sblibs-3.14a | gzip -f9 > sblibs_3.14a.orig.tar.gz
 
