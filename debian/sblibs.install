@@ -1,1 +1,3 @@
 lib/cryptlib/linux.release/libcl.so.3.3.0 usr/lib/sbbs
+lib/mozilla/js/linux.release/libjs.so usr/lib/sbbs
+lib/mozilla/nspr/linux.release/libnspr4.so usr/lib/sbbs
