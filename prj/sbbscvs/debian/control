@@ -1,15 +1,15 @@
-Source: sbbsdev
+Source: sbbscvs
 Section: non-free/net
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.us>
 Build-Depends: debhelper (>= 7.0.15), libncurses5-dev, libnspr4-dev, libmozjs-dev, libx11-dev, sblibcl-dev
 Standards-Version: 3.8.0
 Vcs-Cvs: cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs 
-Vcs-Svn: svn://rocasa.org/syncdeb/sbbsdev/trunk/debian
-Vcs-Browser: http://rocasa.org/cgi-bin/viewvc.cgi/syncdeb/sbbsdev
+Vcs-Svn: svn://rocasa.org/syncdeb/sbbscvs/trunk/debian
+Vcs-Browser: http://rocasa.org/cgi-bin/viewvc.cgi/syncdeb/sbbscvs
 Homepage: http://www.synchro.net
 
-Package: sbbsdev
+Package: sbbscvs
 Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common
 Recommends: make, zip, unzip, dosemu, dosemu-freedos

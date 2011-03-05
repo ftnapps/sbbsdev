@@ -1,0 +1,48 @@
+Synchronet for Debian
+======================
+
+
+Initial Manual setup for running Synchronet
+-------------------------------------------
+
+1) Copy /usr/share/sbbscvs/node1,2,3,4 directories to /opt/sbbscvs/
+2) Correct directories in XTRN.DAT file in node directories or copy the example one
+3) Configure SBBS (sbbscvs) as desired, running scfg & editing ctrl/* as neccessary.
+4) Change the sbbscvs_ENABLE setting to Yes in /etc/default/sbbscvs
+5) As root, or using sudo, run /etc/init.d/sbbscvs start
+
+
+Directories
+-----------
+
+    Synchronet (SBBS) content directories are installed as follows:
+
+    Synchronet executables and libraries
+exec/*	/opt/sbbscvs/exec
+xtrn/*	/opt/sbbscvs/xtrn
+    
+    Synchronet ctrl, text, & web content are installed/updated as follows:
+ctrl/*  /usr/share/sbbscvs/ctrl 
+text/*  /usr/share/sbbscvs/text
+web/*   /usr/share/sbbscvs/web
+data/*	/usr/share/sbbscvs/data
+    Those directories in the /opt/sbbscvs base directory are initially populated by
+    the contents of the same directories in /usr/share/sbbscvs when the package is
+    first installed.  (Any later updates should be done by the sysop.)    
+
+    An /etc/sbbscvs directory is created but is not used by default.
+
+    Synchronet Documentation is installed as follows:
+doc/*	/usr/share/doc/sbbscvs  (except docs/js)
+    And a symbolic link is installed from /opt/sbbscvs/doc to there.
+
+    Example Debian ini/cfg files are installed to /usr/share/doc/sbbscvs/examples.
+    Also, doc-base is used to register the docs index.htm file
+
+    A /var/spool/sbbscvs directory is created, and is used by the example Debian
+    binkd.cfg file.
+
+    See also debian/NEWS.debian and debian/TODO.   See debian/README.source for
+    notes about how the Synchronet Development archve was put together.
+
+ -- Robert James Clay <jame@rocasa.us>  Sat,  5 Nar 2011 17:03 -0500

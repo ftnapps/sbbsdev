@@ -18,7 +18,7 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="Synchronet BBS from CVS"
 NAME=sbbs
-DAEMON=/opt/sbbsdev/exec/$NAME
+DAEMON=/opt/sbbscvs/exec/$NAME
 DAEMON_ARGS=""
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
@@ -27,10 +27,10 @@ SCRIPTNAME=/etc/init.d/$NAME
 [ -x "$DAEMON" ] || exit 0
 
 # Read configuration variable file if it is present
-[ -r /etc/default/sbbsdev ] && . /etc/default/sbbsdev
+[ -r /etc/default/sbbscvs ] && . /etc/default/sbbscvs
 
 # Exit if not yet configured.
-[ "$SBBSDEV_ENABLE" = "No" ] && exit 0
+[ "$SBBSCVS_ENABLE" = "No" ] && exit 0
 
 # Load the VERBOSE setting and other rcS variables
 . /lib/init/vars.sh

@@ -1,10 +1,10 @@
 Synchronet packageing for Debian
 --------------------------------
 
-    After configureing Synchronet, set SBBSDEV_ENABLE to Yes in /etc/default/sbbsdev.
+    After configureing Synchronet, set SBBSCVS_ENABLE to Yes in /etc/default/sbbscvs.
 
     This version of the package uses a pre-compiled version of the cryptlib
 library and is therefore not ready for inclusion into the Debian distribution.
 See also debian/TODO.
 
- -- Robert James Clay <jame@rocasa.us>  Mon, 28 Feb 2011 20:06 -0500
+ -- Robert James Clay <jame@rocasa.us>  Sat,  5 Mar 2011 17:03 -0500
