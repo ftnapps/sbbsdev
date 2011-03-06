@@ -12,6 +12,6 @@ Package: sbbsdev
 Architecture: all
 Depends: ${misc:Depends}, build-esential, devscripts, cvs, libncurses5-dev, libnspr4-dev, libmozjs-dev, libcap2-dev, libx11-dev
 Description: Development of Synchronet BBS on Debian
- This package enables the development of Synchronet BBS on Deian systems,
+ This package enables the development of Synchronet BBS on Debian systems,
  for the creation of Debian packages and/or just compileing the sources
  for local installation.
