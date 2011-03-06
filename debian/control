@@ -5,7 +5,7 @@ Maintainer: Robert James Clay <jame@rocasa.us>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.8.4
 Homepage: http://www.synchro.net
-Vcs-Git: git://git.rocasa.org/syncdeb.git
+Vcs-Git: git://git.rocasa.org/sbbsdeb.git
 Vcs-Browser: http://git.rocasa.org/?p=sbbsdeb.git;a=summary
 
 Package: sbbsdev
