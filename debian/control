@@ -1,5 +1,5 @@
 Source: sbbsdev
-Section: development
+Section: devel
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.us>
 Build-Depends: debhelper (>= 7.0.50~)
