@@ -1,0 +1,4 @@
+# debian/source.lintian-overrides for sbbsdev package
+
+# Override Lintian error an example/default debian/rules files
+sbbsdev: missing-dep-for-interpreter
