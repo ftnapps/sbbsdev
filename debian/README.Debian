@@ -1,0 +1,8 @@
+sbbsdev for Debian
+------------------
+
+This package enables the development of Synchronet BBS on Debian systems,
+for the creation of Debian packages and/or just compileing the sources
+for local installation.  
+
+ -- Robert James Clay <jame@rocasa.us>  Sat, 05 Mar 2011 17:34:43 -0500

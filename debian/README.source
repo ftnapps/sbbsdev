@@ -1,0 +1,15 @@
+sbbsdev for Debian
+------------------
+
+This package enables the development of Synchronet BBS on Deian systems,
+for the creation of Debian packages and/or just compileing the sources
+for local installation.  The source for it is available in the sbbsdev
+branch at git://git.rocasa.org/sbbsdeb.git, which is browseable at 
+http://git.rocasa.org/?p=sbbsdeb.git.  Note that the source for the
+Syncrhonet BBS itself is avaiable at http://www.synchro.net.
+
+
+
+
+
+
