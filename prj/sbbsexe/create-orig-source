@@ -1,5 +1,5 @@
 #!/bin/bash
-# scripts/create-orig-source for sbbsdev Debian package
+# scripts/create-orig-source for sbbsexe Debian package
 # For Synchronet BBS from the current CVS archives. 
 #
 # Copyright 2011 Robert James Clay <jame@rocasa.us>, GPL2+
@@ -29,9 +29,9 @@ fi
 YYMMDD=`date +%y%m%d`
 
 # Set working source directory
-SRCDIR=$WORKDIR/sbbsdev-$YYMMDD
+SRCDIR=$WORKDIR/sbbsexe-$YYMMDD
 
- # Create source directory named in the forat sbbsdev-YYMMDD if not already present
+ # Create source directory named in the forat sbbsexe-YYMMDD if not already present
 if [ ! -d $SRCDIR ]; then
     mkdir $SRCDIR
 fi
@@ -56,5 +56,5 @@ tar -xzvf $WORKDIR/sbbs_dev.tgz
 
 # Create the source archive from the working source directory.
 cd $WORKDIR
-tar cfj sbbsdev_$YYMMDD.orig.tar.bz2 sbbsdev-$YYMMDD/ && rm -fr $WORKDIR/sbbsdev-$YYMMDD
+tar cfj sbbsexe_$YYMMDD.orig.tar.bz2 sbbsexe-$YYMMDD/ && rm -fr $WORKDIR/sbbsexe-$YYMMDD
 
