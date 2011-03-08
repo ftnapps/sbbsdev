@@ -38,7 +38,7 @@ fi
 
 # If do not already have it in the working directory;  download the file 
 # sbbs_src.tgz from ftp://ftp.synchro.net.
-if [ ! -e "$WORKDIR/sbbs_dev.tgz" ]; then
+if [ ! -e "$WORKDIR/sbbs_src.tgz" ]; then
     wget ftp://ftp.synchro.net/sbbs_src.tgz
 fi
 
@@ -51,7 +51,6 @@ fi
 # Extract contents of upstream source archives to source working directory.
 cd $SRCDIR
 tar -xzvf $WORKDIR/sbbs_run.tgz
-cd $SRCDIR/exec
 tar -xzvf $WORKDIR/sbbs_src.tgz
 
 # Create the source archive from the working source directory.
