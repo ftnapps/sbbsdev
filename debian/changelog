@@ -1,5 +1,5 @@
-sbbsdev (110305) UNRELEASED; urgency=low
+sbbsdev (110308) stable; urgency=low
 
-  * Initial Release.
+  * Initial Release of sbbsdev package.
 
- -- Robert James Clay <jame@rocasa.us>  Sat, 05 Mar 2011 17:34:43 -0500
+ -- Robert James Clay <jame@rocasa.us>  Tue,  8 Mar 2011 22:35:14 -0500
