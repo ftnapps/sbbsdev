@@ -2,4 +2,4 @@ sblibcl (3.15a-0.2) stable; urgency=low
 
   * Cryptlib library for SBBS v3.15a, which installs the library libcl.so.3.3.1
 
- -- Robert James Clay <jame@rocasa.us>  Sat, 26 Feb 2011 12:27:23 -0500
+ -- Robert James Clay <jame@rocasa.us>  Sat, 12 Mar 2011 12:25:23 -0500
