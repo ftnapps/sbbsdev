@@ -10,7 +10,7 @@ Homepage: http://www.synchro.net
 
 Package: sbbscvs
 Architecture: i386 amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common
+Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common, adduser
 Recommends: make, zip, unzip, dosemu, dosemu-freedos
 Suggests: binkd, arc, arj, unrar-free, unzoo, zoo, lha
 Provides: httpd, httpd-cgi, ftp-server, news-transport-system, pop3-server, telnet-server
