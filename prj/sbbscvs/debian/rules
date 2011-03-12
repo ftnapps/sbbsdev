@@ -13,8 +13,8 @@ else
 	CFLAGS += -O2
 endif
 
-# Set variable for hardware platform
-HW := $(shell uname -m)
+# Set variable for hardware platform manually
+HW := "x64"
 
 # Set SBBSDIR to base installation directory.
 export SBBSDIR=/opt/sbbscvs
@@ -63,6 +63,16 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/sbbscvs.
+	dh_install src/conio/gcc.linux.$(HW).lib.debug/libciolib_mt.a /opt/synchronet/exec
+	dh_install src/smblib/gcc.linux.$(HW).lib.debug/libsmb.a /opt/synchronet/exec
+	dh_install src/uifc/gcc.linux.$(HW).lib.debug/libuifc_mt.a /opt/synchronet/exec
+	dh_install src/xpdev/gcc.linux.$(HW).lib.debug/libxpdev* /opt/synchronet/exec
+	dh_install src/sbbs3/gcc.linux.$(HW).lib.debug/lib* /opt/synchronet/exec
+	dh_install src/sbbs3/gcc.linux.$(HW).exe.debug/* /opt/synchronet/exec
+	dh_install src/sbbs3/scfg/gcc.linux.$(HW).exe.debug/scfg* /opt/synchronet/exec
+	dh_install src/sbbs3/syncview/gcc.linux.$(HW).exe.debug/syncview /opt/synchronet/exec
+	dh_install src/sbbs3/uedit/gcc.linux.$(HW).exe.debug/uedit /opt/synchronet/exec
+	dh_install src/sbbs3/umonitor/gcc.linux.$(HW).exe.debug/umonitor /opt/synchronet/exec
 	#    
 
 # Build architecture-independent files here.

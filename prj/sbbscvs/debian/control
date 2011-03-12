@@ -9,7 +9,7 @@ Vcs-Browser: http://git.rocasa.org/?p=sbbsdeb.git;a=summary
 Homepage: http://www.synchro.net
 
 Package: sbbscvs
-Architecture: i386 amd64
+Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common, adduser
 Recommends: make, zip, unzip, dosemu, dosemu-freedos, alpine-pico
 Suggests: binkd, arc, arj, unrar-free, unzoo, zoo, lha
