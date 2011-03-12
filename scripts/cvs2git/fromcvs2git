@@ -1,11 +1,18 @@
 #!/bin/bash
-# sbbscvs2git - v0.3 - Robert James Clay
+# fromcvs2git - v0.1 - Robert James Clay
+# First stage script, importing Synchronet CVS repository to a set of GIT
+# repositories, needed because there is no single base directory available
+# via CVS.
+#
+# Copyright 2011 Robert James Clay <jame@rocasa.us>, GPL2+
+#
 
-
+# Set to the directory where the git executables are located.
 LIBDIR=/usr/lib/git-core
+
 PRJDIR=/opt/sbbscvs2git
 
-cd $PRJDIR/repo/fromcvs
+cd $PRJDIR/scm/fromcvs
 
 LOGDIR=$PRJDIR/logs/fromcvs
 
@@ -14,10 +21,10 @@ CVSROOT=":pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs cvs login"
 
 CVSREPO=":pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs"
 
-for MODULE in src-sbbs3 run-sbbs3 ctrl docs exec include install lib src text web xtrn
+for MODULE in ctrl docs exec include install lib src text web xtrn
 do
 
-  GITREPO=$PRJDIR/repo/fromcvs/$MODULE 
+  GITREPO=$PRJDIR/scm/fromcvs/$MODULE 
 
   echo `date` > $LOGDIR/$MODULE-import.start
 
