@@ -12,7 +12,7 @@ SBBSCVS_ENABLE=No
 
 # SBBSCTRL should be set to the directory where the sbbs.ini file is
 # located.  Defaults to /opt/sbbscvs/ctrl.
-export SBBSCTRL=/opt/sbbscv/ctrl
+export SBBSCTRL=/opt/sbbscvs/ctrl
 
 # Additional options that are passed to the Daemon.
 DAEMON_ARGS=$SBBSCTRL/sbbs.ini
