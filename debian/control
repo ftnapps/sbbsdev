@@ -10,7 +10,7 @@ Vcs-Browser: http://git.rocasa.org/?p=sbbsdeb.git;a=summary
 
 Package: sbbsdev
 Architecture: all
-Depends: ${misc:Depends}, build-essential, devscripts, cvs, libncurses5-dev, libnspr4-dev, libmozjs-dev, libcap2-dev, libx11-dev
+Depends: ${misc:Depends}, build-essential, devscripts, cvs, wget, libncurses5-dev, libnspr4-dev, libmozjs-dev, libcap2-dev, libx11-dev
 Description: Development of Synchronet BBS on Debian
  This package enables the development of Synchronet BBS on Debian systems,
  and can be used for the creation of Debian packages and/or just compileing
