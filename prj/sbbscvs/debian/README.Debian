@@ -7,7 +7,7 @@ Initial Manual setup for running Synchronet
 
 1) Copy /usr/share/sbbscvs/node1,2,3,4 directories to /opt/sbbscvs/
 2) Correct directories in XTRN.DAT file in node directories or copy the example one
-3) Configure SBBS (sbbscvs) as desired, running scfg & editing ctrl/* as neccessary.
+3) Configure SBBS (sbbscvs) as desired, running scfg & editing ctrl/* as necessary.
 4) Change the sbbscvs_ENABLE setting to Yes in /etc/default/sbbscvs
 5) As root, or using sudo, run /etc/init.d/sbbscvs start
 
