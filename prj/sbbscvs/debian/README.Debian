@@ -8,7 +8,7 @@ Initial Manual setup for running Synchronet
 1) Copy /usr/share/sbbscvs/node1,2,3,4 directories to /opt/sbbscvs/
 2) Correct directories in XTRN.DAT file in node directories or copy the example one
 3) Configure SBBS (sbbscvs) as desired, running scfg & editing ctrl/* as necessary.
-4) Change the sbbscvs_ENABLE setting to Yes in /etc/default/sbbscvs
+4) Change the SBBSCVS_ENABLE setting to Yes in /etc/default/sbbscvs
 5) As root, or using sudo, run /etc/init.d/sbbscvs start
 
 
@@ -36,13 +36,13 @@ data/*	/usr/share/sbbscvs/data
 doc/*	/usr/share/doc/sbbscvs  (except docs/js)
     And a symbolic link is installed from /opt/sbbscvs/doc to there.
 
-    Example Debian ini/cfg files are installed to /usr/share/doc/sbbscvs/examples.
+    Example ini/cfg files are installed to /usr/share/doc/sbbscvs/examples.
     Also, doc-base is used to register the docs index.htm file
 
-    A /var/spool/sbbscvs directory is created, and is used by the example Debian
+    A /var/spool/sbbscvs directory is created, and is used by the example
     binkd.cfg file.
 
-    See also debian/NEWS.debian and debian/TODO.   See debian/README.source for
-    notes about how the Synchronet Development archve was put together.
+    See also NEWS.Debian and TODO.Debian.   See README.source for notes about
+    how the sbbscvs source archve was put together.
 
- -- Robert James Clay <jame@rocasa.us>  Sat,  5 Nar 2011 17:03 -0500
+ -- Robert James Clay <jame@rocasa.us>  Sun, 13 Mar 2011 09:21 -0500
