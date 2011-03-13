@@ -1,12 +1,9 @@
 Source: sblibcl
-Section: libs
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.us>
 Build-Depends: debhelper (>= 5)
-Homepage: http://www.synchro.net
-Vcs-Git: git://git.rocasa.org/sbbsdeb.git
-Vcs-Browser: http://git.rocasa.org/?p=sbbsdeb.git;a=summary
 Standards-Version: 3.8.4
+Section: libs
 
 Package: sblibcl
 Section: libs
@@ -33,3 +30,4 @@ Description: add encryption and authentication services to software
  with higher layers building on the capabilities provided by the lower layers.
  This is the development package for the library, derived from the source
  package for Synchronet BBS.
+

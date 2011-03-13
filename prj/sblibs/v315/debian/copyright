@@ -48,3 +48,7 @@ cryptlib home page.
 The Debian packaging is (C) 2010-2011, Robert James Clay <jame@rocasa.us> and
 is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
 
+
+# Please also look if there are files or directories which have a
+# different copyright/license attached and list them here.
+
