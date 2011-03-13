@@ -1,0 +1,10 @@
+ToDo for sbbscvs - SBBS from CVS Archives
+----------------------------------------------
+
+- This package is intended to install Synchonet BBS as sbbscvs, so that
+  it can be installed alongside of a working SBBS installation.  Create
+  a script that just adapts the main Synrhonet debian directory by 
+  changing names as neccessary from "synchronet" to "sbbscvs."
+
+- The part of script for building sbbscvs should set debian/changelog.
+
