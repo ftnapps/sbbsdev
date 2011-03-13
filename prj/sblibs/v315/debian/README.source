@@ -1,0 +1,65 @@
+#!/bin/bash
+# debian/README.source for sblibcl release 3.15a.
+# cryptlib for Synchronet v3.15a
+#
+# Copyright 2011 Robert James Clay <jame@rocasa.us>, GPL2+
+#
+#Procedure for createing a source archive
+#=========================================
+
+# If the working directory path is not passed on the command line,
+# then use the current directory.
+if [ -z "$1" ]; then
+    # Use the current directory as the working directory 
+    WORKDIR=`pwd`
+else
+    # Set working directory to that passed on the command line
+    WORKDIR=$1
+    # If working directory is not present, create it
+    if [ ! -d $WORKDIR ]; then
+	mkdir $WORKDIR
+	cd $WORKDIR
+    fi
+fi
+
+# Set working source directory
+SRCDIR=$WORKDIR/sblibcl-3.15a
+
+ # Create source directory named sblibcl-3.15a if not already present
+if [ ! -d $SRCDIR ]; then
+    mkdir $SRCDIR
+fi
+
+# If do not already have it in the working directory;  download the file 
+# sbbs_src.tgz from ftp://ftp.synchro.net.
+if [ ! -e "$WORKDIR/sbbs_src.tgz" ]; then
+    wget ftp://ftp.synchro.net/sbbs_src.tgz
+fi
+
+# Extract contents of upstream source archive to working directory.
+cd $SRCDIR
+tar -xzvf $WORKDIR/sbbs_src.tgz
+
+# Remove the directories and files that are not needed for this archive.
+cd $WORKDIR
+rm -r $SRCDIR/src
+rm -r $SRCDIR/lib/CVS
+rm -r $SRCDIR/lib/cryptlib/CVS
+rm -r $SRCDIR/lib/cryptlib/linux.x64.release/CVS
+rm -r $SRCDIR/include/CVS
+rm -r $SRCDIR/include/cryptlib/CVS
+rm -r $SRCDIR/include/microsoft
+rm -r $SRCDIR/include/mozilla
+rm -r $SRCDIR/include/sdl
+
+# Rename library file with version number
+LIBSRCDIR=$SRCDIR/lib/cryptlib/linux.x64.release
+mv $LIBSRCDIR/libcl.so $LIBSRCDIR/libcl.so.3.3.1
+
+# Adjust the archive information files.
+echo "Contains just the cryptlib files." >> $SRCDIR/FILE_ID.DIZ
+echo "Note that this version of the archive contains just the cryptlib files." >> $SRCDIR/README.TXT
+
+# Create the source archive from the working source directory.
+tar cf - sblibcl-3.15a | gzip -f9 > sblibcl_3.15a.orig.tar.gz
+
