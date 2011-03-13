@@ -1,0 +1,18 @@
+ToDo - sblibs-315
+------------------
+
+    - SONAME entry missing from library file. Used 'readelf -d' file and found that SONAME
+    is not listed there.
+ref:  http://lintian.debian.org/tags/sharedobject-in-library-directory-missing-soname.html
+E: sblibcl: sharedobject-in-library-directory-missing-soname usr/lib/libcl.so.3.3.1
+    -> Can add lintian overrides to the package, but the only real way to take care of that
+is to create a real libcl debian package.
+
+-> I did an update in the repo for this package, but did I ever create and test
+a new package with the changes?
+
+- Have the COPYING & README files for the libcl used with sbbs v3.14a (v3.3.0),
+need the same for what's being used with sbbs v3.15a.
+
+- The COPYING & README files for the libcl can be put in with the debian package,
+but doesn't it need to be in the source archive as well?

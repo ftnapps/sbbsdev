@@ -1,0 +1,13 @@
+ToDo - sblibs-314
+-----------------
+
+- the libcl.so file needs to be unversioned for sbbs to see it, so that needs to
+be adjusted in the package;  moved sym link setting from -dev to main package?
+
+- Need to make sblibs conflict with the package libcl? (Which would 
+presumably be an actual build package of cryptlib instead of just using
+the already built version from the sync archive being used in sblibs.)
+
+- The COPYING & README files for the libcl can be put in with the debian package,
+but doesn't it need to be in the source archive as well?
+
