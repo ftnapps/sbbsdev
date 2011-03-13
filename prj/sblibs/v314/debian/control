@@ -1,0 +1,33 @@
+Source: sblibs
+Priority: extra
+Maintainer: Robert James Clay <jame@rocasa.us>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+Section: libs
+
+Package: sblibs
+Section: libs
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: add encryption and authentication services to software
+ cryptlib consists of a set of layered security services and associated
+ programming interfaces that provide an integrated set of information and
+ communications security capabilities. Much like the network reference model,
+ cryptlib contains a series of layers that provide each level of abstraction,
+ with higher layers building on the capabilities provided by the lower layers.
+ This is the runtime package for the library, derived from the source
+ package for Synchronet BBS.
+
+Package: sblibs-dev
+Section: libdevel
+Architecture: i386
+Depends: sblibs (= ${Source-Version})
+Description: add encryption and authentication services to software
+ cryptlib consists of a set of layered security services and associated
+ programming interfaces that provide an integrated set of information and
+ communications security capabilities. Much like the network reference model,
+ cryptlib contains a series of layers that provide each level of abstraction,
+ with higher layers building on the capabilities provided by the lower layers.
+ This is the development package for the library, derived from the source
+ package for Synchronet BBS.
+

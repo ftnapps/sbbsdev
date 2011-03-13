@@ -1,0 +1,75 @@
+#!/bin/bash
+# debian/create-orig-source for sblibs release 3.14a.
+# libjs for Synchronet v3.14a
+# libnspr4 for Synchronet v3.14a
+# libcl, cryptlib for Synchronet v3.14a
+#
+# Copyright 2011 Robert James Clay <jame@rocasa.us>, GPL2+
+#
+# Procedure for createing a source archive
+# =========================================
+
+# If the working directory path is not passed on the command line,
+# then use the current directory.
+if [ -z "$1" ]; then
+    # Use the current directory as the working directory 
+    WORKDIR=`pwd`
+else
+    # Set working directory to that passed on the command line
+    WORKDIR=$1
+    # If working directory is not present, create it
+    if [ ! -d $WORKDIR ]; then
+	mkdir $WORKDIR
+	cd $WORKDIR
+    fi
+fi
+
+# Set working source directory
+SRCDIR=$WORKDIR/sblibs-3.14a
+
+ # Create source directory named sblibs-3.14a if not already present
+if [ ! -d $SRCDIR ]; then
+    mkdir $SRCDIR
+fi
+
+# If do not already have it in the working directory;  download the file 
+# sbbs_src.tgz from ftp://ftp.synchro.net.
+if [ ! -e "$WORKDIR/ssrc314a.tgz" ]; then
+    wget ftp://ftp.synchro.net/ssrc314a.tgz
+fi
+
+# Extract contents of upstream source archive to working directory.
+cd $SRCDIR
+tar -xzvf $WORKDIR/ssrc314a.tgz
+
+# Remove the directories and files that are not needed for this archive.
+cd $WORKDIR
+rm -r $SRCDIR/src
+rm -r $SRCDIR/include/CVS
+rm -r $SRCDIR/include/cryptlib/CVS
+rm -r $SRCDIR/include/microsoft/CVS
+rm -r $SRCDIR/include/microsoft/psdk/CVS
+rm -r $SRCDIR/include/mozilla/CVS
+rm -r $SRCDIR/include/mozilla/js/CVS
+rm -r $SRCDIR/include/mozilla/nspr/CVS
+rm -r $SRCDIR/include/mozilla/nspr/obsolete/CVS
+rm -r $SRCDIR/include/sdl/CVS
+rm -r $SRCDIR/lib/CVS
+rm -r $SRCDIR/lib/cryptlib/CVS
+rm -r $SRCDIR/lib/cryptlib/linux.release/CVS
+rm -r $SRCDIR/lib/cryptlib/linux.release/libcl.so
+rm -r $SRCDIR/lib/mozilla/CVS
+rm -r $SRCDIR/lib/mozilla/js/CVS
+rm -r $SRCDIR/lib/mozilla/js/linux.debug/CVS
+rm -r $SRCDIR/lib/mozilla/js/linux.release/CVS
+rm -r $SRCDIR/lib/mozilla/nspr/CVS
+rm -r $SRCDIR/lib/mozilla/nspr/linux.debug/CVS
+rm -r $SRCDIR/lib/mozilla/nspr/linux.release/CVS
+
+# Adjust the archive information files.
+echo "Contains just the library files." >> $SRCDIR/FILE_ID.DIZ
+echo "Note that this version of the archive contains just the SBBS Library files." >> $SRCDIR/README.TXT
+
+# Create the source archive from the working source directory.
+tar cf - sblibs-3.14a | gzip -f9 > sblibs_3.14a.orig.tar.gz
+

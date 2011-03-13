@@ -1,0 +1,5 @@
+include/cryptlib/cryptlib.h usr/include/sbbs/cryptlib
+include/mozilla/js/* usr/include/sbbs/mozilla/js
+include/mozilla/nspr/* usr/include/sbbs/mozilla/nspr
+include/mozilla/nspr/obsolete/* usr/include/sbbs/mozilla/nspr/obsolete
+

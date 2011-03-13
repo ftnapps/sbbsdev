@@ -1,0 +1,36 @@
+#!/bin/bash
+# debian/README.source for sblibs release 3.14a.
+# libjs for Synchronet v3.14a
+# libnspr for Synchronet v3.14a
+# libcl, cryptlib for Synchronet v3.14a
+#
+# Copyright 2011 Robert James Clay <jame@rocasa.us>, GPL2+
+
+
+# Procedure for createing a source archive
+# =========================================
+
+1) If the working directory path is not passed on the command line,
+   then use the current directory.  If it is passed on the command
+   line;  if it is not present, create it.
+
+2)  Set working source directory
+
+3) Create source directory named sblibs-3.14a if not already present
+
+4) If do not already have it in the working directory;  download the file 
+   sbbs_src.tgz from ftp://ftp.synchro.net.
+
+5) Extract contents of upstream source archive to working directory.
+
+6) Remove the directories and files that are not needed for this archive.
+
+7) Adjust the archive information files to note what will be included in
+   this archive.
+
+8) Create the source archive from the working source directory.
+
+
+Note also that there is a script available, create-orig-source, that has
+details of this procedure as well as automating it.
+
