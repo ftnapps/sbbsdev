@@ -1,0 +1,17 @@
+Source: sbbsdev
+Section: devel
+Priority: extra
+Maintainer: Robert James Clay <jame@rocasa.us>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.8.4
+Homepage: http://www.synchro.net
+Vcs-Git: git://github.com/jame/sbbsdev.git
+Vcs-Browser: http://github.com/jame/sbbsdev
+
+Package: sbbsdev
+Architecture: all
+Depends: ${misc:Depends}, build-essential, devscripts, cvs, wget, libncurses5-dev, libnspr4-dev, libmozjs-dev, libcap2-dev, libx11-dev
+Description: Development of Synchronet BBS on Debian
+ This package enables the development of Synchronet BBS on Debian systems,
+ and can be used for the creation of Debian packages and/or just compileing
+ the sources for local installation.
