@@ -1,8 +1,8 @@
-sbbsdev (110311+1) UNRELEASED; urgency=low
+sbbsdev (110616) stable; urgency=low
 
-  * Further changes for the sbbsdev package=
+  * Further changes for the sbbsdev package.
 
- -- Robert James Clay <jame@rocasa.us>  Fri, 11 Mar 2011 18:40:04 -0500
+ -- Robert James Clay <jame@rocasa.us>  Sat, 16 Jul 2011 19:47:40 -0500
 
 sbbsdev (110311) stable; urgency=low
 
