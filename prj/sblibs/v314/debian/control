@@ -1,7 +1,7 @@
 Source: sblibs
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.us>
-Build-Depends: debhelper (>= 5)
+Build-Depends: debhelper (>= 7.0.50)
 Standards-Version: 3.7.2
 Section: libs
 

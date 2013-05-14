@@ -1,7 +1,7 @@
 Source: sblibcl
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.us>
-Build-Depends: debhelper (>= 5)
+Build-Depends: debhelper (>= 8)
 Standards-Version: 3.8.4
 Section: libs
 
