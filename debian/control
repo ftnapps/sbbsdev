@@ -5,8 +5,8 @@ Maintainer: Robert James Clay <jame@rocasa.us>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.8.4
 Homepage: http://www.synchro.net
-Vcs-Git: git://github.com/jame/sbbsdev.git
-Vcs-Browser: http://github.com/jame/sbbsdev
+Vcs-Git: git://github.com/ftnapps/sbbsdev.git
+Vcs-Browser: http://github.com/ftnapps/sbbsdev
 
 Package: sbbsdev
 Architecture: all

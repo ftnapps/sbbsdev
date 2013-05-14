@@ -4,6 +4,6 @@ sbbsdev for Debian
 This package enables the development of Synchronet BBS on Debian systems,
 for the creation of Debian packages, and/or just compileing the sources
 for local installation.  The source for it is available in the sbbsdev
-repository at git://github.com/jame/sbbsdev.git, which is browseable at
-http://github.com/jame/sbbsdev.  Note that the source for the
+repository at git://github.com/ftnapps/sbbsdev.git, which is browseable at
+http://github.com/ftnapps/sbbsdev.  Note that the source for the
 Syncrhonet BBS itself is available at http://www.synchro.net.
